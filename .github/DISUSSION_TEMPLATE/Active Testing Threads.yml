@@ -1,0 +1,58 @@
+name: "🧪 New Port Testing Thread"
+description: "Create a testing thread for a newly added game port"
+labels: ["testing", "new port"]
+body:
+  - type: input
+    id: game-title
+    attributes:
+      label: "Game Title"
+      placeholder: "e.g. Dust: An Elysian Tail"
+    validations:
+      required: true
+
+  - type: textarea
+    id: game-description
+    attributes:
+      label: "Short Description of the Game"
+      description: What is the game about? What's the vibe?
+      placeholder: "e.g. A hand-drawn action RPG about a mysterious warrior on a quest for identity..."
+    validations:
+      required: true
+
+  - type: input
+    id: purchase-link
+    attributes:
+      label: "Where to Get the Game"
+      placeholder: "e.g. https://store.steampowered.com/app/236090/"
+    validations:
+      required: true
+
+  - type: textarea
+    id: install-instructions
+    attributes:
+      label: "Installation Instructions"
+      description: Step-by-step instructions to get the game running with the port.
+      placeholder: |
+        1. Purchase/download the game.
+        2. Use Steam Console to download depot: `download_depot <appid> <depotid> <manifestid>`
+        3. Copy the files to `ports/<game>/assets`
+        4. Launch the game.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: known-working
+    attributes:
+      label: "Early Working Info (if tested already)"
+      options:
+        - label: Game boots
+        - label: Game is playable
+        - label: Audio works
+        - label: Saves work
+        - label: Controller input is fine
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Additional Notes or Known Issues"
+      placeholder: "e.g. Works great on AmberELEC with Panfrost, but freezes on ROCKNIX..."
