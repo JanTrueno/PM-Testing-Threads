@@ -1,58 +1,55 @@
-name: "🧪 New Port Testing Thread"
-description: "Create a testing thread for a newly added game port"
-labels: ["testing", "new port"]
+title: "[General] "
+labels: ["General Introduction"]
 body:
-  - type: input
-    id: game-title
+  - type: markdown
     attributes:
-      label: "Game Title"
-      placeholder: "e.g. Dust: An Elysian Tail"
-    validations:
-      required: true
-
+      value: |
+        This is text that will show up in the template!
   - type: textarea
-    id: game-description
+    id: improvements
     attributes:
-      label: "Short Description of the Game"
-      description: What is the game about? What's the vibe?
-      placeholder: "e.g. A hand-drawn action RPG about a mysterious warrior on a quest for identity..."
+      label: Top 3 improvements
+      description: "What are the top 3 improvements we could make to this project?"
+      value: |
+        1.
+        2.
+        3.
+        ...
+      render: bash
     validations:
       required: true
-
+  - type: markdown
+    attributes:
+      value: |
+        ## Markdown header
+        And some more markdown
   - type: input
-    id: purchase-link
+    id: has-id
     attributes:
-      label: "Where to Get the Game"
-      placeholder: "e.g. https://store.steampowered.com/app/236090/"
+      label: Suggestions
+      description: A description about suggestions to help you
     validations:
       required: true
-
-  - type: textarea
-    id: install-instructions
+  - type: dropdown
+    id: download
     attributes:
-      label: "Installation Instructions"
-      description: Step-by-step instructions to get the game running with the port.
-      placeholder: |
-        1. Purchase/download the game.
-        2. Use Steam Console to download depot: `download_depot <appid> <depotid> <manifestid>`
-        3. Copy the files to `ports/<game>/assets`
-        4. Launch the game.
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: known-working
-    attributes:
-      label: "Early Working Info (if tested already)"
+      label: Which area of this project could be most improved?
       options:
-        - label: Game boots
-        - label: Game is playable
-        - label: Audio works
-        - label: Saves work
-        - label: Controller input is fine
-
-  - type: textarea
-    id: notes
+        - Documentation
+        - Pull request review time
+        - Bug fix time
+        - Release cadence
+    validations:
+      required: true
+  - type: checkboxes
     attributes:
-      label: "Additional Notes or Known Issues"
-      placeholder: "e.g. Works great on AmberELEC with Panfrost, but freezes on ROCKNIX..."
+      label: Check that box!
+      options:
+        - label: This one!
+          required: true
+        - label: I won't stop you if you check this one, too
+  - type: markdown
+    attributes:
+      value: |
+        ### The thrilling conclusion
+        _to our template_
